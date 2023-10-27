@@ -55,5 +55,5 @@ jobs:
           git config user.email github-actions@github.com
           git add *.tgz
           git commit -m 'new version'
-          git push develop:origin/main            
+          git push HEAD:main           
 
