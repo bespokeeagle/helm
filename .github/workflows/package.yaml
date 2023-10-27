@@ -47,6 +47,6 @@ jobs:
         with:
           add: '*.tgz' 
           message: 'new version'
-          push: 'origin/main'
+          push: 'develop:origin/main'
             
 
