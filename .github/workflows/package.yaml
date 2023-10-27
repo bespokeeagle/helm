@@ -36,10 +36,11 @@ jobs:
           
       # Runs a set of commands using the runners shell
       - name: Package Chart
-        run: helm package demo
+        run: ls && helm package demo
 
       - name: Index Chart
         run: |
+          ls
           rm -r demo
           rm README.md
           helm repo index .
@@ -52,5 +53,5 @@ jobs:
           git add *.tgz *.yaml
           git commit -m 'new version'
           git checkout -b temp-branch
-          git push https://github.com/bespokeeagle/helm temp-branch:main --force        
-
+          ls
+          git status
