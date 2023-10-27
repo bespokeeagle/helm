@@ -56,5 +56,5 @@ jobs:
           git add *.tgz
           git commit -m 'new version'
           git checkout -b temp-branch
-          git push temp-branch:main           
+          git push https://github.com/bespokeeagle/helm temp-branch:main           
 
