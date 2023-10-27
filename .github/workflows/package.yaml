@@ -43,19 +43,13 @@ jobs:
           rm -r demo
           rm README.md
           helm repo index .
-
-      # - name: Push to repo
-        # uses: EndBug/add-and-commit@v9.1.3
-        # with:
-          # add: '*.tgz' 
-          # message: 'new version'
-          # push: 'origin/main'
+          ls
       
       - name: Push to repo
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add *.tgz
+          git add *.tgz *.yaml
           git commit -m 'new version'
           git checkout -b temp-branch
           git push https://github.com/bespokeeagle/helm temp-branch:main --force        
