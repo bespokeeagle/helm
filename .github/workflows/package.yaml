@@ -40,7 +40,6 @@ jobs:
 
       - name: Index Chart
         run: |
-          ls
           rm -r demo
           rm README.md
           helm repo index .
