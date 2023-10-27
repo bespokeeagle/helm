@@ -48,6 +48,6 @@ jobs:
           add: '*.tgz' 
           message: 'new version'
           new_branch: 'temp-branch'
-          push: 'main'
+
             
 
