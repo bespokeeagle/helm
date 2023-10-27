@@ -47,6 +47,7 @@ jobs:
         with:
           add: '*.tgz' 
           message: 'new version'
-          push: 'develop:origin/main'
+          new_branch: 'temp-branch'
+          push: 'origin/main'
             
 
