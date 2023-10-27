@@ -1,0 +1,18 @@
+apiVersion: v1
+entries:
+  demo:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-10-27T14:09:57.540381951Z"
+    dependencies:
+    - name: common
+      repository: https://charts.helm.sh/incubator/
+      version: ^0.0.5
+    description: A Helm chart for Kubernetes
+    digest: 651c4fa6900039c8cea69bb1d1e32c69be8fe181a87f98c3f9a0c8d0c1e1fa9f
+    name: demo
+    type: application
+    urls:
+    - demo-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-10-27T14:09:57.539148371Z"
