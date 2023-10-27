@@ -52,5 +52,5 @@ jobs:
           git add .
           git commit -m 'new version'
           git checkout -b temp-branch
-          git merge "$env:GITHUB_HEAD_REF"
+          git merge "${{env.GITHUB_HEAD_REF}}"
           ls
