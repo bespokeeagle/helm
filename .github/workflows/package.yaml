@@ -51,6 +51,4 @@ jobs:
           git config user.email github-actions@github.com
           git add .
           git commit -m 'new version'
-          git checkout -b temp-branch
-          git merge $GITHUB_HEAD_REF
-          ls
+          git push https://github.com/bespokeeagle/helm HEAD:fake-main-3
