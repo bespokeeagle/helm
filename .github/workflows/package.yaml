@@ -51,5 +51,6 @@ jobs:
           git config user.email github-actions@github.com
           git add .
           git commit -m 'new version'
-          git pull fake-main-3
+          git fetch
+          git pull origin fake-main-3
           git push https://github.com/bespokeeagle/helm HEAD:fake-main-3
