@@ -52,5 +52,5 @@ jobs:
           git add .
           git commit -m 'new version'
           git fetch
-          git pull origin fake-main-3 --no-rebase 
+          git pull origin fake-main-3 --no-rebase --allow-unrelated-histories
           git push https://github.com/bespokeeagle/helm HEAD:fake-main-3
