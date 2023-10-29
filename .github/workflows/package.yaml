@@ -38,18 +38,12 @@ jobs:
       - name: Package Chart
         run: bash changescrript.sh
 
-      - name: Index Chart
-        run: |
-          rm -r demo
-          rm README.md
-          helm repo index .
-          ls
       
       - name: Push to repo
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add *.tgz
+          git add *.tgz README.md
           git commit -m 'new version'
           git fetch
           git checkout main

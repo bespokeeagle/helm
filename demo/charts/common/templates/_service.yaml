@@ -6,11 +6,10 @@ spec:
   type: {{ .Values.service.type }}
   ports:
   - name: http
-    port: 80
+    port: {{ .Values.service.port }}
     targetPort: http
   selector:
-    app: {{ template "common.name" . }}
-    release: {{ .Release.Name | quote }}
+    {{- include "common.selectorLabels" . | nindent 4 }}
 {{- end -}}
 {{- define "common.service" -}}
 {{- template "common.util.merge" (append . "common.service.tpl") -}}

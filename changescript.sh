@@ -12,7 +12,6 @@ do
         echo "Packaging $TOBEPACKAGED"
         helm package $TOBEPACKAGED
         rm -r demo
-        rm README.md
         # helm repo index --merge "index.yaml" .
        
     fi
