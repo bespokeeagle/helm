@@ -8,7 +8,8 @@ do
     if [ -d $directory ]
     then
         echo "i am a $directory directory"
-        TOBEPACKAGED=(`git diff --name-only origin/develop..origin/main | grep $directory/Chart.yaml |  cut -f 1 -d '/'`)
+        echo "1 $GITHUB_REF_NAME 2 $GITHUB_HEAD_REF 3 $GITHUB_BASE_REF	"
+        TOBEPACKAGED=(`git diff --name-only origin/$GITHUB_REF_NAME..origin/$GITHUB_BASE_REF| grep $directory/Chart.yaml |  cut -f 1 -d '/'`)
         echo "Packaging $TOBEPACKAGED"
         helm package $TOBEPACKAGED
         rm -r demo
