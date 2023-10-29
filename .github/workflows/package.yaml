@@ -49,5 +49,6 @@ jobs:
           git fetch
           git checkout fake-main-3
           git pull origin fake-main-3
+          git merge $GITHUB_HEAD_REF
           helm repo index .
           git push https://github.com/bespokeeagle/helm HEAD:fake-main-3
