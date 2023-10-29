@@ -1,0 +1,8 @@
+{{- define "common.deployment.tpl" -}}
+apiVersion: apps/v1
+kind: Deployment
+{{ template "common.metadata" . }}
+{{- end -}}
+{{- define "common.deployment" -}}
+{{- template "common.util.merge" (append . "common.deployment.tpl") -}}
+{{- end -}}
