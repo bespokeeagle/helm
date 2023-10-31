@@ -51,4 +51,4 @@ jobs:
           git status
           git checkout fake-main-3
           helm repo index .
-          git push https://github.com/bespokeeagle/helm HEAD:fake-main-3
+          git push https://github.com/bespokeeagle/helm HEAD:fake-main-3 --force
