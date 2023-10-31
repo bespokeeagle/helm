@@ -43,12 +43,11 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          ls
-          git add *.tgz README.md
-          git commit -m 'new version'
           git fetch
-          git push https://github.com/bespokeeagle/helm HEAD:fake-main-3 --force
-          git status
-          git checkout fake-main-3
+          git checkout fake-main-4
+          mv ~/*.tgz .
+          ls                    
           helm repo index .
-          git push https://github.com/bespokeeagle/helm HEAD:fake-main-3 --force
+          git add *.tgz README.md index.yaml
+          git commit -m 'new version'
+          git push https://github.com/bespokeeagle/helm HEAD:fake-main-4
