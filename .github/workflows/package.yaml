@@ -47,7 +47,7 @@ jobs:
           git add *.tgz README.md
           git commit -m 'new version'
           git fetch
-          git push https://github.com/bespokeeagle/helm HEAD:fake-main-3
+          git push https://github.com/bespokeeagle/helm HEAD:fake-main-3 --force
           git checkout fake-main-3
           git pull origin fake-main-3
           helm repo index .
