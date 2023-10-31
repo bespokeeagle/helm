@@ -14,7 +14,7 @@ do
         echo "Packaging $TOBEPACKAGED"
         helm package $TOBEPACKAGED
         rm -r demo
-        mv -r *.tgz ~
+        mv  *.tgz ~
         # helm repo index --merge "index.yaml" .
        
     fi
