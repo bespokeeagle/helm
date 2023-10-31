@@ -44,11 +44,11 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git fetch
-          git checkout fake-main-4
+          git checkout main
           mv ~/*.tgz .
           mv ~/README.md .
           ls                    
           helm repo index .
           git add *.tgz README.md index.yaml
           git commit -m 'new version'
-          git push https://github.com/bespokeeagle/helm HEAD:fake-main-4
+          git push https://github.com/bespokeeagle/helm HEAD:main
