@@ -46,6 +46,7 @@ jobs:
           git fetch
           git checkout fake-main-4
           mv ~/*.tgz .
+          mv ~/README.md .
           ls                    
           helm repo index .
           git add *.tgz README.md index.yaml

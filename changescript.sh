@@ -15,6 +15,7 @@ do
         helm package $TOBEPACKAGED
         rm -r demo
         mv  *.tgz ~
+        mv README.md
         # helm repo index --merge "index.yaml" .
        
     fi
